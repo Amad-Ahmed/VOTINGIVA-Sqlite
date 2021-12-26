@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".LoginActivity">
+    <View
+        android:layout_width="10dp"
+        android:layout_height="match_parent"
+        android:background="@color/primary"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerInParent="true"
+        android:layout_alignParentLeft="true">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_votingiva_logo"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true" />
+            </RelativeLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp">
+
+                <EditText
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/primary"
+                    android:textColorHint="@color/primary"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp">
+
+                <EditText
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/password"
+                    android:inputType="textPassword"
+                    android:textColor="@color/primary"
+                    android:textColorHint="@color/primary"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/login"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/login"
+                android:padding="22dp"
+                android:backgroundTint="@color/primary_two"
+                />
+
+        </LinearLayout>
+    </ScrollView>
+<ImageView
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:src="@drawable/plus"
+    android:id="@+id/goto_reg"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentEnd="true"
+    android:layout_marginBottom="30dp"
+    android:layout_marginStart="30dp"
+    android:layout_marginEnd="-15dp"
+    android:layout_alignParentRight="true"
+    android:layout_marginLeft="30dp"
+    android:layout_marginRight="-15dp" />
+</RelativeLayout>

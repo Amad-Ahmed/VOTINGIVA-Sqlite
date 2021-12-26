@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    tools:context=".RegisterActivity">
+    <View
+        android:layout_width="11dp"
+        android:layout_height="match_parent"
+        android:background="@color/primary"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentStart="true" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerInParent="true"
+        android:paddingTop="10dp"
+        android:layout_alignParentLeft="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_votingiva_logo"
+                    android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/username"
+                    android:textColor="@color/primary"
+                    android:textColorHint="@color/primary"
+                    android:inputType="textEmailAddress"
+                    android:hint="Input Username"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/email"
+                    android:textColor="@color/primary"
+                    android:textColorHint="@color/primary"
+                    android:inputType="textEmailAddress"
+                    android:hint="Input Email"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/password"
+                    android:textColor="@color/primary"
+                    android:textColorHint="@color/primary"
+                    android:inputType="textPassword"
+                    android:hint="Input Password"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/password_con"
+                    android:textColor="@color/primary"
+                    android:textColorHint="@color/primary"
+                    android:inputType="textPassword"
+                    android:hint="Input Confirm Password"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/register"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="15dp"
+                android:backgroundTint="@color/primary_two"
+                android:text="@string/reg"
+                android:padding="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="15dp" />
+        </LinearLayout>
+
+    </ScrollView>
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/back_to_login"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-15dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="-15dp"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/back_arrow"/>
+
+</RelativeLayout>

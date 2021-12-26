@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".CreatePollActivity">
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="CREATE YOUR POLL"
+    android:textSize="40sp"
+    android:fontFamily="casual"
+    android:textColor="@color/primary_two"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:hint="ENTER POLL NAME"
+        android:layout_marginTop="30dp"
+        android:textSize="30sp"
+        android:id="@+id/pollname"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="ENTER YOUR QUESTION"
+        android:layout_marginTop="20dp"
+        android:id="@+id/question"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="OPTION A"
+        android:layout_marginTop="10dp"
+        android:id="@+id/optA"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="OPTION B"
+        android:layout_marginTop="10dp"
+        android:id="@+id/optB"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="OPTION C"
+        android:layout_marginTop="10dp"
+        android:id="@+id/optC"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="OPTION D"
+        android:layout_marginTop="10dp"
+        android:id="@+id/optD"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spin"
+        android:textSize="20sp"
+        android:hint="Select Category"
+        android:padding="12dp"
+        android:background="@android:drawable/editbox_background"/>
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:id="@+id/post"
+        android:text="POST POLL"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:fontFamily="casual"
+        android:backgroundTint="@color/primary_two"
+        android:textColor="@color/white"/>
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center"
+        android:id="@+id/save"
+        android:text="SAVE POLL"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:fontFamily="casual"
+        android:backgroundTint="@color/primary_two"
+        android:textColor="@color/white"/>
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center"
+        android:id="@+id/discard"
+        android:text="DISCARD POLL"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:fontFamily="casual"
+        android:backgroundTint="@color/primary_two"
+        android:textColor="@color/white"/>
+</LinearLayout>
