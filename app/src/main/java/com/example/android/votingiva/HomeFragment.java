@@ -2,8 +2,11 @@ package com.example.android.votingiva;
 
 //import static com.example.android.votingiva.password_db.T_EMAIL;
 
+import static android.content.Context.MODE_PRIVATE;
+
 import android.content.Intent;
-        import android.os.Bundle;
+import android.content.SharedPreferences;
+import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -17,6 +20,7 @@ import android.view.View;
 import android.view.ViewGroup;
         import android.widget.ArrayAdapter;
 import android.widget.SeekBar;
+import android.widget.TextView;
 
 import com.example.android.votingiva.Adapters.RecyclerViewAdaptor;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -30,9 +34,10 @@ public class HomeFragment extends Fragment {
     private ArrayList<Poll> pollArrayList;
     private ArrayAdapter<String> arrayAdapter;
     password_db db;
-
+    public String email;
+    TextView textView;
+    public String Uname;
     // MyAdapter myAdapter;
-
     public HomeFragment() {
         // Required empty public constructor
     }
@@ -50,16 +55,19 @@ public class HomeFragment extends Fragment {
     {
         View view= inflater.inflate(R.layout.fragment_home, container, false);
         FloatingActionButton fab = view.findViewById(R.id.fab);
-        String email="";
+        textView = view.findViewById(R.id.uv);
         if(getArguments()!=null){
-            email=getArguments().getString("email");
+            SharedPreferences sh = getContext().getSharedPreferences("MySharedPref", MODE_PRIVATE);
+            email=sh.getString("email", "");
         }
-        String finalEmail = email;
+        Uname = db.fetch_about(email);
+        textView.setText(Uname);
+        //String finalEmail = email;
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i=new Intent(getActivity(),CreatePollActivity.class);
-                i.putExtra("email", finalEmail);//email passed onto createPOLLActivity
+                i.putExtra("email", email);//email passed onto createPOLLActivity
                 startActivity(i);
             }
         });
@@ -70,9 +78,6 @@ public class HomeFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
-
-
         // Recycler View Initialization
         recyclerView = view.findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);

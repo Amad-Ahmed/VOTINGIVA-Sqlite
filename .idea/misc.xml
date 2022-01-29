@@ -3,9 +3,38 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/3rd Semester/Database systems/project/Voting-master/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.24114583333333334" />
+        <entry key="..\:/3rd Semester/Database systems/project/Voting-master/app/src/main/res/drawable/gra.xml" value="0.378125" />
+        <entry key="..\:/3rd Semester/Database systems/project/Voting-master/app/src/main/res/drawable/header.xml" value="0.44947916666666665" />
+        <entry key="..\:/3rd Semester/Database systems/project/Voting-master/app/src/main/res/drawable/ic_home.xml" value="0.38697916666666665" />
+        <entry key="..\:/3rd Semester/Database systems/project/Voting-master/app/src/main/res/drawable/ic_votingiva_logo.xml" value="0.24114583333333334" />
+        <entry key="..\:/3rd Semester/Database systems/project/Voting-master/app/src/main/res/drawable/ic_votingiva_y.xml" value="0.24114583333333334" />
+        <entry key="..\:/3rd Semester/Database systems/project/Voting-master/app/src/main/res/drawable/ic_votingiva_y2.xml" value="0.24114583333333334" />
+        <entry key="..\:/3rd Semester/Database systems/project/Voting-master/app/src/main/res/drawable/ic_votingiva_y_background.xml" value="0.24114583333333334" />
+        <entry key="..\:/3rd Semester/Database systems/project/Voting-master/app/src/main/res/drawable/pro.xml" value="0.34322916666666664" />
         <entry key="..\:/3rd Semester/Database systems/project/Voting-master/app/src/main/res/drawable/progress_track.xml" value="0.3359375" />
-        <entry key="..\:/3rd Semester/Database systems/project/Voting-master/app/src/main/res/layout/fragment_home.xml" value="0.2821557971014493" />
+        <entry key="..\:/3rd Semester/Database systems/project/Voting-master/app/src/main/res/drawable/rounded.xml" value="0.35104166666666664" />
+        <entry key="..\:/3rd Semester/Database systems/project/Voting-master/app/src/main/res/drawable/topabout.xml" value="0.378125" />
+        <entry key="..\:/3rd Semester/Database systems/project/Voting-master/app/src/main/res/drawable/topcir.xml" value="0.378125" />
+        <entry key="..\:/3rd Semester/Database systems/project/Voting-master/app/src/main/res/drawable/toplogo.xml" value="0.35104166666666664" />
+        <entry key="..\:/3rd Semester/Database systems/project/Voting-master/app/src/main/res/layout/activity_bar.xml" value="0.30416666666666664" />
+        <entry key="..\:/3rd Semester/Database systems/project/Voting-master/app/src/main/res/layout/activity_create_poll.xml" value="0.33" />
+        <entry key="..\:/3rd Semester/Database systems/project/Voting-master/app/src/main/res/layout/activity_home.xml" value="0.37083333333333335" />
+        <entry key="..\:/3rd Semester/Database systems/project/Voting-master/app/src/main/res/layout/activity_login.xml" value="0.35520833333333335" />
+        <entry key="..\:/3rd Semester/Database systems/project/Voting-master/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/3rd Semester/Database systems/project/Voting-master/app/src/main/res/layout/activity_register.xml" value="0.33489583333333334" />
+        <entry key="..\:/3rd Semester/Database systems/project/Voting-master/app/src/main/res/layout/dialog_searchable_spinner.xml" value="0.33" />
+        <entry key="..\:/3rd Semester/Database systems/project/Voting-master/app/src/main/res/layout/fragment_about.xml" value="0.25" />
+        <entry key="..\:/3rd Semester/Database systems/project/Voting-master/app/src/main/res/layout/fragment_home.xml" value="0.33" />
+        <entry key="..\:/3rd Semester/Database systems/project/Voting-master/app/src/main/res/layout/fragment_notification.xml" value="0.3302083333333333" />
+        <entry key="..\:/3rd Semester/Database systems/project/Voting-master/app/src/main/res/layout/noti_row.xml" value="0.4370139968895801" />
         <entry key="..\:/3rd Semester/Database systems/project/Voting-master/app/src/main/res/layout/row.xml" value="0.33" />
+        <entry key="..\:/3rd Semester/Database systems/project/Voting-master/app/src/main/res/mipmap-anydpi-v26/ic_b.xml" value="0.34322916666666664" />
+        <entry key="..\:/3rd Semester/Database systems/project/Voting-master/app/src/main/res/mipmap-anydpi-v26/ic_votingiva_y.xml" value="0.24114583333333334" />
+        <entry key="..\:/3rd Semester/Database systems/project/Voting-master/app/src/main/res/mipmap-anydpi-v26/ic_votingiva_y_round.xml" value="0.24114583333333334" />
+        <entry key="..\:/Votingiva/Voting-master/app/src/main/res/layout/activity_bar.xml" value="0.37083333333333335" />
+        <entry key="..\:/Votingiva/Voting-master/app/src/main/res/layout/dialog_searchable_spinner.xml" value="0.37083333333333335" />
+        <entry key="..\:/Votingiva/Voting-master/app/src/main/res/layout/row.xml" value="0.37083333333333335" />
       </map>
     </option>
   </component>

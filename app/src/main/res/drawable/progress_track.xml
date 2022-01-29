@@ -2,11 +2,10 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item>
         <shape android:shape="rectangle">
-            <solid android:color="@color/float_transparent"/>
-            <size android:height="40dp"/>
+            <solid android:color="@color/float_transparent"/>  <!-- remaining color -->
+            <size android:height="10dp"/>
             <corners android:radius="10dp"/>
-            <stroke android:color="#E0E0E0"
-                android:width="1dp"/>
+            <!-- <stroke android:color="#E0E0E0" android:width="1dp"/>  border -->
         </shape>
     </item>
 
@@ -17,12 +16,13 @@
                     android:drawable="@android:color/transparent"/>
                 <item>
                     <shape android:shape="rectangle">
-                        <solid android:color="#DDDDDD"/>
-                        <size android:height="40dp"/>
+                        <solid android:color="@color/background"/>    <!-- fill color -->
+                        <size android:height="10dp"/>
                         <corners android:bottomLeftRadius="10dp"
-                            android:topLeftRadius="10dp"/>
-                        <stroke android:color="#E0E0E0"
-                            android:width="1dp"/>
+                            android:topLeftRadius="10dp"
+                            android:radius="10dp"/>
+<!--                        <stroke android:color="#E0E0E0"-->
+<!--                            android:width="1dp"/>-->
                     </shape>
                 </item>
             </selector>

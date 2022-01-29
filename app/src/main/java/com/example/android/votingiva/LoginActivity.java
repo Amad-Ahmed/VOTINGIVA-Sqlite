@@ -2,7 +2,9 @@ package com.example.android.votingiva;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
@@ -66,6 +68,12 @@ public class LoginActivity extends AppCompatActivity {
             Cursor res = myDatabase.login_user(email, password);
             if (res.getCount() == 1) {
                 Intent i = new Intent(LoginActivity.this, HomeActivity.class);
+                // Storing data into SharedPreferences
+                SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("MySharedPref",MODE_PRIVATE);
+                SharedPreferences.Editor myEdit = sharedPreferences.edit();
+                myEdit.putString("email", email);
+                myEdit.apply();
+
                 i.putExtra("email",email);
                 startActivity(i);
             } else {

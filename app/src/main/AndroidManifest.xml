@@ -10,10 +10,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Votingiva">
+        <activity
+            android:name=".BarActivity"
+            android:exported="false" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".LoginActivity" />
-        <activity android:name=".CreatePollActivity"/>
+        <activity android:name=".CreatePollActivity" />
         <activity
             android:name=".SplashActivity"
             android:exported="true">

@@ -20,15 +20,85 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView"
+        <View
+            android:id="@+id/view2"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_height="120dp"
+            android:background="@drawable/header"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/uv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserratsemibold"
+            android:text="User"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            app:layout_constraintBottom_toBottomOf="@+id/un"
+            app:layout_constraintStart_toEndOf="@+id/un"
+            app:layout_constraintTop_toTopOf="@+id/un" />
+
+        <TextView
+            android:id="@+id/pv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/montserratregular"
+            android:text="Welcome Back!\nYou got some polls to vote."
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            app:layout_constraintStart_toStartOf="@+id/un"
+            app:layout_constraintTop_toBottomOf="@+id/un" />
+
+        <TextView
+            android:id="@+id/un"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/montserratsemibold"
+            android:text="Hello "
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+<!--        <ImageView-->
+<!--            android:id="@+id/img"-->
+<!--            android:layout_width="250dp"-->
+<!--            android:layout_height="250dp"-->
+<!--            android:layout_marginTop="-75dp"-->
+<!--            android:layout_marginEnd="-70dp"-->
+<!--            android:layout_marginRight="-70dp"-->
+<!--            android:src="@drawable/ic_vote"-->
+<!--            app:layout_constraintBottom_toBottomOf="@+id/pv"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintVertical_bias="0.0" />-->
+
+
+        <AnalogClock
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/pv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="130dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view2" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

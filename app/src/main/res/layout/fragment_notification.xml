@@ -1,16 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".NotificationFragment">
 
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/noti"
-        android:textSize="48sp"
-        android:textStyle="bold"
-        android:gravity="center"/>
+        android:layout_height="match_parent">
 
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@drawable/header"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/Notifi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-25dp"
+            android:layout_marginLeft="-25dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/montserratmedium"
+            android:text="Notifications"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            app:layout_constraintStart_toEndOf="@+id/noti"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/noti"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="-25dp"
+            android:layout_marginLeft="-25dp"
+            android:layout_marginTop="-15dp"
+            android:src="@drawable/ic_bell"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/ReNoti"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="70dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Notifi" />
+
+<!--        <androidx.recyclerview.widget.RecyclerView-->
+<!--            android:id="@+id/ReNoti"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.5"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

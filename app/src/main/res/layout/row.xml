@@ -4,18 +4,24 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="350dp">
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    app:cardElevation="5dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:paddingBottom="20dp">
 
         <TextView
             android:id="@+id/PName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/robotobold"
             android:paddingTop="20dp"
             android:text="Poll Name"
+            android:textColor="@color/primary_two"
+            android:textSize="24dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
@@ -25,9 +31,12 @@
             android:id="@+id/Question"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/robotomedium"
             android:paddingLeft="10dp"
             android:paddingTop="30dp"
             android:text="Question ?"
+            android:textColor="@color/primary_two"
+            android:textSize="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/PName" />
@@ -37,10 +46,13 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:fontFamily="@font/robotoregular"
             android:paddingLeft="20dp"
             android:paddingTop="15dp"
             android:paddingBottom="10dp"
             android:text="Option A"
+            android:textColor="@color/primary"
+            android:textSize="17dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/Question" />
@@ -50,45 +62,57 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:fontFamily="@font/robotoregular"
             android:paddingLeft="20dp"
             android:paddingTop="15dp"
             android:paddingBottom="10dp"
             android:text="Option B"
+            android:textColor="@color/primary"
+            android:textSize="17dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/optA" />
+            app:layout_constraintTop_toBottomOf="@id/seekBarA" />
 
         <TextView
             android:id="@+id/optC"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:fontFamily="@font/robotoregular"
             android:paddingLeft="20dp"
             android:paddingTop="15dp"
             android:paddingBottom="10dp"
             android:text="Option C"
+            android:textColor="@color/primary"
+            android:textSize="17dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/optB" />
+            app:layout_constraintTop_toBottomOf="@id/seekBarB" />
 
         <TextView
             android:id="@+id/optD"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:fontFamily="@font/robotoregular"
             android:paddingLeft="20dp"
             android:paddingTop="15dp"
             android:paddingBottom="10dp"
             android:text="Option D"
+            android:textColor="@color/primary"
+            android:textSize="17dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/optC" />
+            app:layout_constraintTop_toBottomOf="@id/seekBarC" />
 
         <TextView
             android:id="@+id/perD"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/robotomedium"
             android:text="0"
+            android:textColor="@color/background"
+            android:textSize="15dp"
             app:layout_constraintBottom_toBottomOf="@+id/optD"
             app:layout_constraintEnd_toEndOf="@+id/optD"
             app:layout_constraintTop_toTopOf="@+id/optD" />
@@ -97,7 +121,10 @@
             android:id="@+id/perC"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/robotomedium"
             android:text="0"
+            android:textColor="@color/background"
+            android:textSize="15dp"
             app:layout_constraintBottom_toBottomOf="@+id/optC"
             app:layout_constraintEnd_toEndOf="@+id/optC"
             app:layout_constraintTop_toTopOf="@+id/optC" />
@@ -106,7 +133,10 @@
             android:id="@+id/perB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/robotomedium"
             android:text="0"
+            android:textColor="@color/background"
+            android:textSize="15dp"
             app:layout_constraintBottom_toBottomOf="@+id/optB"
             app:layout_constraintEnd_toEndOf="@+id/optB"
             app:layout_constraintTop_toTopOf="@+id/optB" />
@@ -115,10 +145,77 @@
             android:id="@+id/perA"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/robotomedium"
             android:text="0"
+            android:textColor="@color/background"
+            android:textSize="15dp"
             app:layout_constraintBottom_toBottomOf="@+id/optA"
             app:layout_constraintEnd_toEndOf="@+id/optA"
             app:layout_constraintTop_toTopOf="@+id/optA" />
+
+        <SeekBar
+            android:id="@+id/seekBarA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:indeterminate="false"
+            android:max="100"
+            android:progress="0"
+            android:progressDrawable="@drawable/progress_track"
+            android:thumb="@color/float_transparent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/optA" />
+
+        <SeekBar
+            android:id="@+id/seekBarB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progress="0"
+            android:progressDrawable="@drawable/progress_track"
+            android:thumb="@color/float_transparent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/optB" />
+
+        <SeekBar
+            android:id="@+id/seekBarC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progress="0"
+            android:progressDrawable="@drawable/progress_track"
+            android:thumb="@color/float_transparent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/optC" />
+
+        <SeekBar
+            android:id="@+id/seekBarD"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progress="0"
+            android:progressDrawable="@drawable/progress_track"
+            android:thumb="@color/float_transparent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/optD" />
+
+        <!--        <Button-->
+        <!--            android:id="@+id/button"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginTop="328dp"-->
+        <!--            android:layout_marginEnd="320dp"-->
+        <!--            android:layout_marginRight="320dp"-->
+        <!--            android:fontFamily="@font/montserratbold"-->
+        <!--            android:text="Trend"-->
+        <!--            android:textColor="@color/background"-->
+        <!--            app:backgroundTint="#292929"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintTop_toBottomOf="@+id/optD" />-->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

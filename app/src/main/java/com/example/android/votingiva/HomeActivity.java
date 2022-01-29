@@ -51,24 +51,23 @@ public class HomeActivity extends AppCompatActivity {
                 loadFragment(fragment);
             }
         });
-        bottomNavigation.setCount(1,"10"); // count
+        bottomNavigation.setCount(1,null); // count
         bottomNavigation.show(2,true); // home fragment initially
-
         bottomNavigation.setOnClickMenuListener(new MeowBottomNavigation.ClickListener() {
             @Override
             public void onClickItem(MeowBottomNavigation.Model item) {
-                Toast.makeText(getApplicationContext()
-                ,"You clicked" + item.getId()
-                ,Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getApplicationContext()
+//                ,"You clicked" + item.getId()
+//                ,Toast.LENGTH_SHORT).show();
             }
         });
 
         bottomNavigation.setOnReselectListener(new MeowBottomNavigation.ReselectListener() {
             @Override
             public void onReselectItem(MeowBottomNavigation.Model item) {
-                Toast.makeText(getApplicationContext()
-                        ,"You Reselected" + item.getId(),
-                        Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getApplicationContext()
+//                        ,"You Reselected" + item.getId(),
+//                        Toast.LENGTH_SHORT).show();
             }
         });
     }

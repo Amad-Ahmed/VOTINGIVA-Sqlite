@@ -1,5 +1,10 @@
 package com.example.android.votingiva;
 
+
+import static android.content.Context.MODE_PRIVATE;
+
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -13,6 +18,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.android.votingiva.Adapters.RecyclerViewAdaptor;
 
@@ -41,10 +47,11 @@ public class AboutFragment extends Fragment {
         email=view.findViewById(R.id.email);
         user=view.findViewById(R.id.username);
         myDatabase=new password_db(this.getContext());//context is always context
-        if(getArguments()!=null){
-            String email_var=getArguments().getString("email");//extracting email
-            email.setText(email_var);
-            user.setText(myDatabase.fetch_about(email_var));
+        if(getContext()!=null) {
+            SharedPreferences sh = getContext().getSharedPreferences("MySharedPref", MODE_PRIVATE);
+            String s1 = sh.getString("email", "");
+            email.setText(s1);
+            user.setText(myDatabase.fetch_about(s1));
         }
         return view;
     }
@@ -56,9 +63,12 @@ public class AboutFragment extends Fragment {
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));   // we can dynamically change that // we want to show over cards linearly
         loadDataListView();//calling our custom created function
+
     }
     public void loadDataListView() {//this passes the values into the adapter
-        pollArrayList = myDatabase.getSavedData();
+        SharedPreferences sh = getContext().getSharedPreferences("MySharedPref", MODE_PRIVATE);
+        String s2 = sh.getString("email", "");
+        pollArrayList = myDatabase.getSavedData(myDatabase.fetch_UserID(s2));
         // Use Recycler View
         recyclerViewAdaptor = new RecyclerViewAdaptor(getContext(), pollArrayList);
         recyclerView.setAdapter(recyclerViewAdaptor);

@@ -4,15 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
+    android:background="#292929"
     android:gravity="center"
     tools:context=".SplashActivity">
+
     <ImageView
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:src="@drawable/ic_votingiva_logo"
         android:id="@+id/splash_image"
+        android:layout_width="500dp"
+        android:layout_height="500dp"
         android:gravity="center"
-        />
+        android:src="@drawable/ic_votingiva_y" />
 
 </LinearLayout>

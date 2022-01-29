@@ -3,84 +3,167 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFEFF"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".AboutFragment">
+    <View
+        android:id="@+id/gra"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:background="@drawable/gra"
+        app:layout_constraintBottom_toTopOf="@id/l1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-   <TextView
-       android:id="@+id/about"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:layout_marginLeft="20dp"
-       android:gravity="center"
-       android:text="@string/about"
-       android:textSize="48sp"
-       android:textStyle="bold" />
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_marginTop="70dp"
-    android:orientation="vertical"
-   >
-   <LinearLayout
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:orientation="horizontal"
-       >
-   <TextView
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:layout_marginLeft="20dp"
-       android:text="USER NAME :"
-       android:textSize="20sp"/>
-      <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginLeft="20dp"
-          android:id="@+id/username"
-          android:textSize="20sp"/>
-   </LinearLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp">
 
-   <LinearLayout
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:orientation="horizontal"
-       android:layout_marginTop="10dp"
-       >
-      <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginLeft="20dp"
-          android:text="EMAIL :"
-          android:textSize="20sp"/>
-      <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_marginLeft="20dp"
-          android:id="@+id/email"
-          android:textSize="20sp"/>
-   </LinearLayout>
-   <TextView
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:layout_marginTop="20dp"
-       android:textStyle="bold"
-       android:text="SAVED POLLS"
-       android:paddingLeft="140dp"
-       android:textSize="20sp"/>
-   <androidx.constraintlayout.widget.ConstraintLayout
-       android:layout_width="match_parent"
-       android:layout_height="match_parent"
-       android:layout_marginTop="10dp">
+        <!--      <LinearLayout-->
+        <!--          android:id="@+id/linearLayout"-->
+        <!--          android:layout_width="match_parent"-->
+        <!--          android:layout_height="match_parent"-->
+        <!--          android:orientation="vertical"-->
+        <!--          tools:layout_editor_absoluteY="60dp">-->
+<!--        <View-->
+<!--            android:id="@+id/gra"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="150dp"-->
+<!--            android:background="@drawable/gra"-->
+<!--            app:layout_constraintBottom_toTopOf="@id/l1"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.5"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
 
-      <androidx.recyclerview.widget.RecyclerView
-          android:id="@+id/recyclerView"
-          android:layout_width="match_parent"
-          android:layout_height="match_parent"
-          app:layout_constraintBottom_toBottomOf="parent"
-          app:layout_constraintEnd_toEndOf="parent"
-          app:layout_constraintHorizontal_bias="0.5"
-          app:layout_constraintStart_toStartOf="parent"
-          app:layout_constraintTop_toTopOf="parent" />
-   </androidx.constraintlayout.widget.ConstraintLayout>
-   </LinearLayout>
+        <View
+            android:id="@+id/TopCir"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="88dp"
+            android:background="@drawable/topcir"
+            app:layout_constraintBottom_toTopOf="@id/l1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/TopAbout"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/topabout"
+            app:layout_constraintBottom_toBottomOf="@id/TopCir"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/TopCir" />
+
+        <TextView
+            android:id="@+id/about"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/robotobold"
+            android:gravity="center"
+            android:text="@string/about"
+            android:textColor="@color/background"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/TopAbout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/TopAbout" />
+
+        <LinearLayout
+            android:id="@+id/l1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@id/l2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/TopCir">
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginLeft="20dp"-->
+<!--                android:fontFamily="@font/oswaldsemibold"-->
+<!--                android:text="Hello "-->
+<!--                android:textSize="20sp" />-->
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/robotobold"
+                android:textColor="#292929"
+                android:textSize="24dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/l2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@id/saved"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/l1">
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginLeft="20dp"-->
+<!--                android:text=""-->
+<!--                android:textSize="20sp" />-->
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/robotolight"
+                android:textColor="#292929"
+                android:textSize="18dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/saved"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:paddingLeft="115dp"
+            android:text="SAVED POLLS"
+            android:textSize="30dp"
+            android:textColor="#292929"
+            android:fontFamily="@font/oswaldbold"
+            app:layout_constraintTop_toBottomOf="@id/l2" />
+
+        <ScrollView
+            android:id="@+id/sv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="380dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/saved">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                app:layout_constraintBottom_toBottomOf="@id/sv"
+                app:layout_constraintEnd_toEndOf="@id/sv"
+                app:layout_constraintStart_toStartOf="@id/sv"
+                app:layout_constraintTop_toTopOf="@id/sv" />
+            <!--      </LinearLayout>-->
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

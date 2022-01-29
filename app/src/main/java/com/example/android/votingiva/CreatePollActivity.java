@@ -38,8 +38,8 @@ public class CreatePollActivity extends AppCompatActivity {
         setContentView(R.layout.activity_create_poll);
 
         Bundle bundle=getIntent().getExtras();
-        String email=bundle.getString("email");
-
+        String email= bundle.getString("email");
+//        Toast.makeText(CreatePollActivity.this,"Email done! :: " + email, Toast.LENGTH_SHORT).show();
         spin=findViewById(R.id.spin);//for the category
         db=new password_db(this);
         pollName=findViewById(R.id.pollname);
